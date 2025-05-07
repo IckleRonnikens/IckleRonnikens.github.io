@@ -1,0 +1,135 @@
+{
+  "artists": [{
+    "title" : "Archiepy",
+    "name" : "archiepy",
+    "slug" : "archiepy",
+    "arturl" : "https://achiepy.tumblr.com/",
+    "fanart": ["001", "002", "003", "004", "005", "006", "007", "008", "009", "010", "011", "012", "013", "014", "015", "016", "017", "018", "019", "020", "021", "022", "023", "024", "025"]
+  },{
+    "title" : "Amandioka",
+    "name" : "amandioka",
+    "slug" : "amandioka",
+    "arturl" : "",
+    "fanart": ["001", "002", "003", "004", "005"]
+  },{
+    "title" : "Arishatistic",
+    "name" : "arishatistic",
+    "slug" : "arishatistic",
+    "arturl" : "https://www.instagram.com/arishatistic/",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Asha",
+    "name" : "asha",
+    "slug" : "asha",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Cele",
+    "name" : "cele",
+    "slug" : "cele",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Christyyeee",
+    "name" : "christyyeee",
+    "slug" : "christyyeee",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Cyy",
+    "name" : "cyy",
+    "slug" : "cyy",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "DemaParbat",
+    "name" : "demaparbat",
+    "slug" : "demaparbat",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Disgruntledwing",
+    "name" : "disgruntledwing",
+    "slug" : "disgruntledwing",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Elena Tesnickaya",
+    "name" : "elena-tesnickaya",
+    "slug" : "elena-tesnickaya",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Fi Masak",
+    "name" : "fi-masak",
+    "slug" : "fi-masak",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Hastyhand",
+    "name" : "hastyhand",
+    "slug" : "hastyhand",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Lovelyrugbee",
+    "name" : "lovelyrugbee",
+    "slug" : "lovelyrugbee",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Luchan",
+    "name" : "luchan",
+    "slug" : "luchan",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Nili",
+    "name" : "nili",
+    "slug" : "nili",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Patronustrip",
+    "name" : "patronustrip",
+    "slug" : "patronustrip",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Prophecymarauder45",
+    "name" : "prophecymarauder45",
+    "slug" : "prophecymarauder45",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Raydarkwolf",
+    "name" : "raydarkwolf",
+    "slug" : "raydarkwolf",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Shira",
+    "name" : "shira",
+    "slug" : "shira",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Sspill",
+    "name" : "sspill",
+    "slug" : "sspill",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Valkxxs",
+    "name" : "valkxxs",
+    "slug" : "valkxxs",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  },{
+    "title" : "Yanka",
+    "name" : "yanka",
+    "slug" : "yanka",
+    "arturl" : "",
+    "fanart": ["01", "02", "03", "04", "05", "06", "07"]
+  }]
+}

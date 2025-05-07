@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Pathway+Gothic+One');
+
+.credits {
+    background-image: radial-gradient(225.46% 169.6% at 50% 90%, #ffd27b 0, #df3a93 33.33%, #5c1663 66.67%, rgba(32, 31, 66, 0) 100%);
+    color: white;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+
+.credits header {
+  margin: 20px 0;
+}
+.credits header h1 {
+  font-size: 8vw;
+  letter-spacing: .1em;
+  font-family: 'Bungee', cursive;
+  text-align: center;
+}
+
+.credits section h2 {
+  font-size: 1.7em;
+  font-family: 'Bungee', cursive;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.credits img {
+  width: 700px;
+  margin-left: -100px;
+}
+
+.credits .container {
+  padding: 50px;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+}
+
+.credits .content {
+  display: flex;
+  overflow: hidden;
+}
+
+.credits .ratings {
+  margin: 4px 0 0 8px;
+}
+.credits .ratings ul {
+  display: flex;
+}
+.credits .ratings ul li {
+  border: none;
+}
+.credits .ratings i {
+  font-size: .5em;
+  padding: 0 2px;
+}
+
+.credits .main {
+  margin-top: 30px;
+  display: flex;
+}
+.credits .main article {
+  width: 320px;
+  padding-right: 30px;
+}
+
+.credits .features p, .credits .review p {
+  line-height: 1.5em;
+}
+
+.credits .preview {
+  padding: 20px 0;
+}
+.credits .preview li {
+  margin-bottom: 20px;
+}
+.credits .preview h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  float: left;
+  margin-right: 10px;
+}
+.credits .preview h4 {
+  text-transform: uppercase;
+  margin: 2px 0 5px 0;
+}
+
+.credits .onscreen {
+  padding: 20px 0;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-transform: uppercase;
+}
+.credits .onscreen h4 {
+  margin-right: 10px;
+}
+.credits .onscreen li {
+  margin-bottom: 10px;
+  display: flex;
+}
+.credits .onscreen li ul li {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+
+.credits .side article {
+  width: 320px;
+  padding-right: 30px;
+}
+
+.credits .features {
+  padding: 20px 0;
+}
+.credits .features li {
+  margin-bottom: 20px;
+}
+.credits .features h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  float: left;
+  margin-right: 10px;
+}
+.credits .features h4 {
+  text-transform: uppercase;
+  margin: 2px 0 5px 0;
+}
+
+.credits .review {
+  padding: 20px 0;
+}
+.credits .review li {
+  margin-bottom: 20px;
+}
+.credits .review h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  float: left;
+  margin-right: 10px;
+}
+.credits .review h4 {
+  text-transform: uppercase;
+  margin: 2px 0 5px 0;
+}
+
+.credits .red {
+  color: #FF3200;
+}
+.credits .yellow {
+  color: #FFC700;
+}
+.credits .blue {
+  color: #0185B5;
+}

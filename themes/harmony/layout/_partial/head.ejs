@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+  <meta charset="utf-8">
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = 'Archives';
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = 'Category: ' + page.category;
+  } else if (is_tag()){
+    title = 'Tag: ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <%- open_graph({twitter_id: theme.twitter_id, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (theme.rss){ %>
+    <link rel="alternate" href="<%- url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- url_for(theme.favicon) %>">
+  <% } %>
+  <% if (config.highlight.enable){ %>
+    <link href="//fonts.googleapis.com/css?family=Marvel" rel="stylesheet" type="text/css">
+  <% } %>
+
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/cffb07fee0.js" crossorigin="anonymous"></script>
+
+<!-- Google fonts-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marvel">
+
+<!-- Parallax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" integrity="sha512-/6TZODGjYL7M8qb7P6SflJB/nTGE79ed1RfJk3dfm/Ib6JwCT4+tOfrrseEHhxkIhwG8jCl+io6eaiWLS/UX1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js" integrity="sha512-LakXTeQv/7MQDIA7zCNsIyr3h1S/YJbTOFShNkuDqc/FLrkpP6SKF7oQ8dV1bTJ65M/CG1weGhpl8ZwTTTYgow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest.json">
+
+<!-- List Js -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+  <%- partial('google-analytics') %>
+
+  <%- css('css/style') %>
+  <%- css('css/hero') %>
+  <%- css('css/thumbnail') %>
+  <%- css('css/navigation') %>
+
+
+
+
+
+</head>
+<body>
+
+  

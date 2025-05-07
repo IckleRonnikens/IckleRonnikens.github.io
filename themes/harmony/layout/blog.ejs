@@ -1,0 +1,37 @@
+<div class="container-fluid">
+
+	<section class="blog_hero">
+		<div class="blog_hero_content">
+		  <h2 class="blog_hero_title">The Blog</h2>
+		  <p class="blog_hero_subtitle">Keep up to date with what is happening in the Harmony community... </p>
+		  <a href="#blog"><button type="button" class="btn btn-light">View Posts</button></a>
+		</div>
+		<div class="blog_hero_image" id="blog_hero_image"></div>
+		<div class="blog_hero_mask"></div>
+	</section>
+
+
+<section class="blog" id="blog" >
+
+	  <div class="row featurette">
+  
+	  <% site.categories.findOne({name: 'blog'}).posts.sort('id').each(function(post) { %> 
+		<div class="col-md-7">
+		  <h2 class="featurette-heading fw-normal lh-1"><%= post.title %></span></h2><hr />
+		  <p class="lead"><%= post.summary %></p>
+		<a href="<%= post.path %>"><button type="button" class="btn btn-lg btn-light text-center">View Post</P></button></a><br />
+  
+		</div>
+		<div class="col-md-5">
+		  <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="<%= post.image %>" preserveAspectRatio="xMidYMid slice"> 
+		</div>
+	  <% })%>
+	</div>
+  
+	
+  </section>
+
+</div>
+
+<%- css('css/blog') %>
+

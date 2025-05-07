@@ -1,0 +1,127 @@
+.fanfiction_hero {
+    color: white;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+  }
+  
+  .fanfiction_hero_content {
+    margin: 55vh auto auto 25vw;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .fanfiction_hero_title {
+    font-family: "Heebo", sans-serif;
+    font-weight: 900;
+    margin: 0;
+    text-shadow: 0px 0px 8px black;
+    font-size: 3em;
+    line-height: 1em;
+    text-decoration: none!important;
+  }
+  
+  .fanfiction_hero_subtitle {
+    opacity: 0.85;
+    margin-top: 0.5em;
+    text-shadow: 0px 0px 8px black;
+    font-size: 1.5em;
+  }
+  
+  .fanfiction_hero_action {
+    height: 2em;
+    border-radius: 2em;
+    color: white;
+    border: none;
+    padding: 0.4em 2em;
+    box-shadow: 0px 0px 8px black;
+    position: relative;
+    width: 7em;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 700px) {
+    .fanfiction_hero_content {
+      width: 90%;
+      margin: 40vh 2em auto 2em;
+    }
+  }
+  
+  .fanfiction_hero_action:hover {
+    animation: callToAction 1500ms ease-in infinite;
+  }
+  
+  @keyframes callToAction {
+    0% {
+      transform: scale(1);
+    }
+    40% {
+      transform: scale(1.07);
+    }
+    50% {
+      transform: scale(1.04);
+    }
+    60% {
+      transform: scale(1.07);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+  
+  @media (max-height: 500px) {
+    .fanfiction_hero_title {
+      font-size: 2em;
+    }
+  
+    .fanfiction_hero_subtitle {
+      font-size: 1em;
+    }
+  
+    .fanfiction_hero_action {
+      height: 1.4em;
+      border-radius: 1.4em;
+      width: 4.5em;
+    }
+  
+    .fanfiction_hero_actionText {
+      font-size: 0.9em;
+    }
+  }
+  
+  .fanfiction_hero_image {
+    display: inline-block;
+    position: absolute;
+    z-index: -10;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/backgrounds/fanfiction.jpg");
+    background-position: top;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .fanfiction_hero_mask {
+    position: absolute;
+    z-index: -8;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(#180047, #060231 50%);
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+  }
+  
+  .fanfiction_hero_snowfall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -6;
+    opacity: 0.75;
+  }
+  
