@@ -1,0 +1,1500 @@
+/*
+Theme Name: Harry and Hermione
+Theme URI: https://wordpress.org/themes/harryandhermione/
+Author: IckleRonnikens
+Author URI: https://harryandhermione.com
+Description: Harry and Hermione is canon, bitches.
+Requires at least: 6.7
+Tested up to: 6.8
+Requires PHP: 7.2
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: harryandhermione
+Tags: 
+*/
+
+
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700|Roboto+Condensed:400,700");
+@import url("https://fonts.googleapis.com/css?family=Heebo:900|Roboto|Satisfy&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Bungee|Pathway+Gothic+One');
+@import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
+
+
+/* Color Scheme */
+.Black { background: linear-gradient(223.17deg, #1c1829, #1b1828 8.61%, #191724 17.21%, #161520 25.82%, #14131c 34.42%, #121218 43.03%, #111117 51.63%);}
+.Cyan { background: linear-gradient(223.17deg, #237287, #246c84 8.61%, #265f7c 17.21%, #274f72 25.82%, #284367 34.42%, #283a5f 43.03%, #28375c 51.63%); }
+.Blurple { background: linear-gradient(223.17deg, #8c7bc8, #8a77c2 8.61%, #866db2 17.21%, #7e619f 25.82%, #75548b 34.42%, #6d4b7b 43.03%, #694775 51.63%); }
+.RedPurple { background: linear-gradient(223.17deg, #c36267, #bd5f68 8.61%, #ae586a 17.21%, #9b4e69 25.82%, #874466 34.42%, #783d61 43.03%, #723a5f 51.63%); }
+.Blueish { background: linear-gradient(223.17deg, #545b75, #515872 8.61%, #4a526c 17.21%, #424964 25.82%, #3a415c 34.42%, #343b56 43.03%, #323953 51.63%); }
+.Greenish { background: linear-gradient(223.17deg, #515d47, #4e5b45 8.61%, #45563f 17.21%, #3a5039 25.82%, #324936 34.42%, #2e4435 43.03%, #2c4234 51.63%); }
+/* .Yellowing {} */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+*, html {
+    scroll-behavior: smooth !important;
+}
+
+html, body, section {
+  block-size: 100%;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+body {
+  margin: 0;
+  /* background-color: #111117; */
+  /* background-image: radial-gradient(225.46% 169.6% at 50% 90%, #f5eca3 0, #df3a93 33.33%, #5c1663 66.67%, rgba(32, 31, 66, 0) 100%); */
+  color: #ffffff;
+    font-family: "Satisfy", cursive;
+  overscroll-behavior: none;
+}
+
+
+h1 {
+  font-family: "Satisfy", cursive;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 0px 0px 8px black;
+  font-size: 3em;
+  line-height: 1em;
+  text-decoration: none!important;
+}
+
+h2 a {text-decoration: none;}
+
+h3 {
+  font-family: "Heebo", sans-serif;
+    font-size: 5vw;
+}
+
+h4 {
+  font-family: "Heebo", sans-serif;
+    font-size: 4vw;
+}
+
+h5 {
+  font-family: "Heebo", sans-serif;
+    font-size: 3vw;
+}
+
+/* img {
+  transition: transform .2s; 
+} 
+
+img:hover {
+  transform: scale(1.025);
+  border: 5pt solid #fff;
+} */
+
+ul, li {list-style-type: none;}
+
+  /* HEADER */
+
+.Header__container {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5em;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 5vw;
+  width: 100%;
+  z-index: 1;
+}
+
+.Header__left {
+  display: flex;
+  flex-direction: row;
+  font-family: "Satisfy", cursive;
+}
+
+.Header__logo {
+  width: 4.5em;
+  margin: auto;
+}
+
+.Header__title {
+  display: flex;
+  margin-left: 0.6em;
+}
+
+.Header__title h2 {
+  font-weight: normal;
+  margin: 0.1em;
+}
+
+.Header__title h1 a {
+color: #ffffff;
+text-decoration: none;
+}
+
+.nav.navbar-nav.navbar-right li a {
+  color: #ffffff;
+}
+
+.Hero {
+  color: white;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.Hero__content {
+  margin: 45vh auto auto 25vw;
+  width: 50%;
+  text-align: center;
+}
+
+.Hero__title {
+  font-family: "Heebo", sans-serif;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 0px 0px 8px black;
+  font-size: 3em;
+  line-height: 1em;
+  text-decoration: none!important;
+}
+
+.Hero__subtitle {
+  margin-top: 0.5em;
+  text-shadow: 0px 0px 8px black;
+  font-size: 1.5em;
+}
+
+.Hero__action {
+  height: 2em;
+  border-radius: 2em;
+  color: white;
+  border: none;
+  padding: 0.4em 2em;
+  box-shadow: 0px 0px 8px black;
+  position: relative;
+  width: 7em;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .Hero__content {
+    width: 90%;
+    margin: 40vh 2em auto 2em;
+  }
+}
+
+.Hero__action:hover {
+  animation: callToAction 1500ms ease-in infinite;
+}
+
+@keyframes callToAction {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.07);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  60% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+@media (max-height: 500px) {
+  .Hero__title {
+    font-size: 2em;
+  }
+
+  .Hero__subtitle {
+    font-size: 1em;
+  }
+
+  .Hero__action {
+    height: 1.4em;
+    border-radius: 1.4em;
+    width: 4.5em;
+  }
+
+  .Hero__actionText {
+    font-size: 0.9em;
+  }
+}
+
+.Hero__image {
+  display: inline-block;
+  position: absolute;
+  z-index: -10;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/wp-content/themes/harryandhermione/assets/images/backgrounds/background-poa.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.Hero__mask {
+  position: absolute;
+  z-index: -8;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(#180047, #060231 50%);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+.Hero__snowfall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -6;
+  opacity: 0.75;
+}
+
+/* NAVIGATION */
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  background-color: #111117;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+}
+
+.overlay-content {
+  top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+ #image {
+  background-image: url("/wp-content/themes/harryandhermione/assets/images/menu/home.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100% auto;
+  height: 100vh;
+  transition: opacity .25s ease-in-out;
+
+}
+
+
+.overlay a, .overlay a:visited {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 3.3vh;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #ffe200;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 50px;
+  font-size: 60px;
+  z-index: 1;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 0px;
+  right: 50px;
+  }
+}
+
+
+/* ABOUT */
+
+.about {
+    /* background: linear-gradient(233deg, #237287 23.91%, #246C84 33.21%, #265F7C 42.51%, #274F72 51.8%, #284367 61.1%, #283A5F 70.4%, #28375C 79.7%); */
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 2rem 2rem;
+    overflow: hidden;
+    background-color: #111117;
+    align-items: center;
+}
+
+.about-page {
+  background-image: url(/wp-content/themes/harryandhermione/assets/images/backgrounds/about.jpg);
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-attachment: scroll;
+  /* background: linear-gradient(233deg, #237287 23.91%, #246C84 33.21%, #265F7C 42.51%, #274F72 51.8%, #284367 61.1%, #283A5F 70.4%, #28375C 79.7%); */
+  height: 100vh;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+
+.about-text {
+  background-color: #111117;
+  height: 100vh;
+  width: 100%;
+  text-align: left;
+  align-self: stretch;
+  font-size: clamp(3lvh, 2.6vw, 5lvh);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -.03em;
+  line-height: 120%;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+.about-text h3 {
+  color: #5c1663;
+}
+
+.about-text .gradient {
+    margin: auto;
+    align-self: stretch;
+    background-image: radial-gradient(225.46% 169.6% at 50% 90%, #ffd27b 0, #df3a93 33.33%, #5c1663 66.67%, rgba(32, 31, 66, 0) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+@media screen and (max-height: 450px) {
+.about h1 {text-align: center!important;}
+}
+
+.about-top {
+    background: linear-gradient(233deg, #237287 23.91%, #246C84 33.21%, #265F7C 42.51%, #274F72 51.8%, #284367 61.1%, #283A5F 70.4%, #28375C 79.7%);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-middle {
+  background: linear-gradient(233deg, #237287 23.91%, #246C84 33.21%, #265F7C 42.51%, #274F72 51.8%, #284367 61.1%, #283A5F 70.4%, #28375C 79.7%);
+  height: 100vh;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.about-bottom {
+  background-color: #111117;
+  height: 100vh;
+  width: 100%;
+  text-align: left;
+  align-self: stretch;
+  font-size: clamp(3lvh, 2.6vw, 5lvh);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -.03em;
+  line-height: 120%;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+
+
+
+/* HARRY HERO */
+
+.harry_hero {
+  background-image: url(/wp-content/themes/harryandhermione/assets/images/backgrounds/harry-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #111117;
+  color: white;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.harry_text {
+  background-color: #111117;
+  width: 100%;
+  height: 100vh auto;
+  
+}
+
+.harry_text_content {
+  width: 100%;
+  text-align: left;
+  flex-direction: column;
+}
+
+.harry_text_title {
+  font-family: "Heebo", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  color: #fff9cb;
+  text-shadow: 0px 0px 8px black;
+  font-size: 3em;
+  line-height: 1em;
+  text-decoration: none!important;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: .9;
+  text-transform: uppercase;
+  align-items: left;
+}
+
+.harry_text_subtitle {
+  margin-top: 0.5em;
+  text-shadow: 0px 0px 8px black;
+  font-size: 1.5em;
+  color: #2c4234;
+}
+
+
+/* BLOG */
+
+.blog_hero {
+  color: white;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.blog_hero_content {
+  margin: 45vh auto auto 25vw;
+  width: 50%;
+  text-align: center;
+}
+
+.blog_hero_title {
+  font-family: "Heebo", sans-serif;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 0px 0px 8px black;
+  font-size: 3em;
+  line-height: 1em;
+  text-decoration: none!important;
+}
+
+.blog_hero_subtitle {
+  margin-top: 0.5em;
+  text-shadow: 0px 0px 8px black;
+  font-size: 1.5em;
+}
+
+.blog_hero_action {
+  height: 2em;
+  border-radius: 2em;
+  color: white;
+  border: none;
+  padding: 0.4em 2em;
+  box-shadow: 0px 0px 8px black;
+  width: 7em;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .blog_hero_content {
+    width: 90%;
+    margin: 40vh 2em auto 2em;
+  }
+}
+
+.blog_hero_action:hover {
+  animation: callToAction 1500ms ease-in infinite;
+}
+
+@keyframes callToAction {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.07);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  60% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+@media (max-height: 500px) {
+  .blog_hero_title {
+    font-size: 2em;
+  }
+
+  .blog_hero_subtitle {
+    font-size: 1em;
+  }
+
+  .blog_hero_action {
+    height: 1.4em;
+    border-radius: 1.4em;
+    width: 4.5em;
+  }
+
+  .blog_hero_actionText {
+    font-size: 0.9em;
+  }
+}
+
+.blog_hero_image {
+  display: inline-block;
+  position: absolute;
+  z-index: -10;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/wp-content/themes/harryandhermione/assets/images/backgrounds/blog.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.blog_hero_mask {
+  position: absolute;
+  z-index: -8;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(#180047, #060231 50%);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+.blog_hero_snowfall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -6;
+  opacity: 0.75;
+}
+
+
+.blog {
+    background-color: #515d47;
+    height: 100vh;
+    width: 100%;
+    text-align: justify;
+}
+
+.blog-title {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 10vw;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin: 5px 0;
+    text-align: left;
+    width: 85%;
+  }
+  @media screen and (min-width: 640px) {
+    .blog-title {
+      font-size: 8vw;
+    }
+  }
+  
+  @-webkit-keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-12px, 0, 0);
+    }
+    to {
+      opacity: 0;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-12px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+  }
+  
+  .animate {
+    -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-timing-function: cubic-bezier(0.2, 0.3, 0.25, 0.9);
+            animation-timing-function: cubic-bezier(0.2, 0.3, 0.25, 0.9);
+  }
+  
+  .delay {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  
+  .delay-400 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  
+  .delay-500 {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+  }
+  
+  .delay-600 {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  
+  .delay-700 {
+    -webkit-animation-delay: 0.7s;
+            animation-delay: 0.7s;
+  }
+  
+  .delay-800 {
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+
+
+/* SOCIAL MEDIA */
+
+  .social {
+    background: linear-gradient(223.17deg, #8c7bc8, #8a77c2 8.61%, #866db2 17.21%, #7e619f 25.82%, #75548b 34.42%, #6d4b7b 43.03%, #694775 51.63%);
+    width: 100%;
+    height: 100vh;
+    text-align: justify;
+}
+
+.fa-brands a:link, a:hover, a:visited {
+    text-decoration: none;
+    color: #fff!important;
+}
+
+/* FANART */
+
+.fanart_hero {
+  color: white;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.fanart_hero_content {
+  margin: 45vh auto auto 25vw;
+  width: 50%;
+  text-align: center;
+}
+
+.fanart_hero_title {
+  font-family: "Heebo", sans-serif;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 0px 0px 8px black;
+  font-size: 3em;
+  line-height: 1em;
+  text-decoration: none!important;
+}
+
+.fanart_hero_subtitle {
+  margin-top: 0.5em;
+  text-shadow: 0px 0px 8px black;
+  font-size: 1.5em;
+}
+
+.fanart_hero_action {
+  height: 2em;
+  border-radius: 2em;
+  color: white;
+  border: none;
+  padding: 0.4em 2em;
+  box-shadow: 0px 0px 8px black;
+  position: relative;
+  width: 7em;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .fanart_hero_content {
+    width: 90%;
+    margin: 40vh 2em auto 2em;
+  }
+}
+
+.fanart_hero_action:hover {
+  animation: callToAction 1500ms ease-in infinite;
+}
+
+@keyframes callToAction {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.07);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  60% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+@media (max-height: 500px) {
+  .fanart_hero_title {
+    font-size: 2em;
+  }
+
+  .fanart_hero_subtitle {
+    font-size: 1em;
+  }
+
+  .fanart_hero_action {
+    height: 1.4em;
+    border-radius: 1.4em;
+    width: 4.5em;
+  }
+
+  .fanart_hero_actionText {
+    font-size: 0.9em;
+  }
+}
+
+.fanart_hero_image {
+  display: inline-block;
+  position: absolute;
+  z-index: -10;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/wp-content/themes/harryandhermione/assets/images/backgrounds/fanart.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.fanart_hero_mask {
+  position: absolute;
+  z-index: -8;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(#180047, #060231 50%);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+.fanart_hero_snowfall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -6;
+  opacity: 0.75;
+}
+
+
+.fanart {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/wp-content/themes/harryandhermione/assets/images/backgrounds/fanart.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+/* FANFICTION */
+
+.fanfiction_hero {
+  color: white;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.fanfiction_hero_content {
+  margin: 45vh auto auto 25vw;
+  width: 50%;
+  text-align: center;
+}
+
+.fanfiction_hero_title {
+  font-family: "Heebo", sans-serif;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 0px 0px 8px black;
+  font-size: 3em;
+  line-height: 1em;
+  text-decoration: none!important;
+}
+
+.fanfiction_hero_subtitle {
+  margin-top: 0.5em;
+  text-shadow: 0px 0px 8px black;
+  font-size: 1.5em;
+}
+
+.fanfiction_hero_action {
+  height: 2em;
+  border-radius: 2em;
+  color: white;
+  border: none;
+  padding: 0.4em 2em;
+  box-shadow: 0px 0px 8px black;
+  position: relative;
+  width: 7em;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .fanfiction_hero_content {
+    width: 90%;
+    margin: 40vh 2em auto 2em;
+  }
+}
+
+.fanfiction_hero_action:hover {
+  animation: callToAction 1500ms ease-in infinite;
+}
+
+@keyframes callToAction {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.07);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  60% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+@media (max-height: 500px) {
+  .fanfiction_hero_title {
+    font-size: 2em;
+  }
+
+  .fanfiction_hero_subtitle {
+    font-size: 1em;
+  }
+
+  .fanfiction_hero_action {
+    height: 1.4em;
+    border-radius: 1.4em;
+    width: 4.5em;
+  }
+
+  .fanfiction_hero_actionText {
+    font-size: 0.9em;
+  }
+}
+
+.fanfiction_hero_image {
+  display: inline-block;
+  position: absolute;
+  z-index: -10;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/wp-content/themes/harryandhermione/assets/images/backgrounds/fanfiction.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.fanfiction_hero_mask {
+  position: absolute;
+  z-index: -8;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(#180047, #060231 50%);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+.fanfiction_hero_snowfall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -6;
+  opacity: 0.75;
+}
+
+
+.fanfiction {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    overflow: hidden;
+    position: relative;
+    margin-top: 5em;
+    padding: none;
+}
+
+
+/* PODCAST */
+
+.podcast {
+  background: linear-gradient(223.17deg, #515d47, #4e5b45 8.61%, #45563f 17.21%, #3a5039 25.82%, #324936 34.42%, #2e4435 43.03%, #2c4234 51.63%);
+  height: 100vh;
+  width: 100%;
+  text-align: justify;
+}
+
+/* PROJECTS */
+
+
+.projects_hero {
+  color: white;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.projects_hero_content {
+  margin: 45vh auto auto 25vw;
+  width: 50%;
+  text-align: center;
+}
+
+.projects_hero_title {
+  font-family: "Heebo", sans-serif;
+  font-weight: 900;
+  margin: 0;
+  text-shadow: 0px 0px 8px black;
+  font-size: 3em;
+  line-height: 1em;
+  text-decoration: none!important;
+}
+
+.projects_hero_subtitle {
+  margin-top: 0.5em;
+  text-shadow: 0px 0px 8px black;
+  font-size: 1.5em;
+}
+
+.projects_hero_action {
+  height: 2em;
+  border-radius: 2em;
+  color: white;
+  border: none;
+  padding: 0.4em 2em;
+  box-shadow: 0px 0px 8px black;
+  position: relative;
+  width: 7em;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .projects_hero_content {
+    width: 90%;
+    margin: 40vh 2em auto 2em;
+  }
+}
+
+.projects_hero_action:hover {
+  animation: callToAction 1500ms ease-in infinite;
+}
+
+@keyframes callToAction {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.07);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  60% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+@media (max-height: 500px) {
+  .projects_hero_title {
+    font-size: 2em;
+  }
+
+  .projects_hero_subtitle {
+    font-size: 1em;
+  }
+
+  .projects_hero_action {
+    height: 1.4em;
+    border-radius: 1.4em;
+    width: 4.5em;
+  }
+
+  .projects_hero_actionText {
+    font-size: 0.9em;
+  }
+}
+
+.projects_hero_image {
+  display: inline-block;
+  position: absolute;
+  z-index: -10;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/wp-content/themes/harryandhermione/assets/images/backgrounds/projects.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.projects_hero_mask {
+  position: absolute;
+  z-index: -8;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(#180047, #060231 50%);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+
+/* Quotes */
+
+.quotes {
+  height: 100vh;
+  background: linear-gradient(223.17deg, #1c1829, #1b1828 8.61%, #191724 17.21%, #161520 25.82%, #14131c 34.42%, #121218 43.03%, #111117 51.63%);
+  width: 100%;
+  text-align: justify;
+  overflow: hidden;
+}
+
+/* Quotes Pages */
+
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+  height: 100%;
+}
+.timeline__content-title {
+  font-weight: normal;
+  font-size: 66px;
+  margin: -10px 0 0 0;
+  transition: 0.4s;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: "Pathway Gothic One", sans-serif;
+  color: #fff;
+}
+.timeline__content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Cardo;
+  font-weight: normal;
+  line-height: 25px;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, 0.07);
+}
+@media only screen and (max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+}
+.timeline-item {
+  padding: 40px 0;
+  opacity: 0.3;
+  transition: 0.5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+  height: 100vh;
+   
+}
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-family: "Pathway Gothic One", sans-serif;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 0;
+  right: calc(-100% - 56px);
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px);
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  padding-right: 15px;
+}
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-item--active:before {
+  top: 50%;
+  transition: 0.3s all 0.2s;
+  opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+  margin: -50px 50px 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .timeline-item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .timeline-item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  margin-bottom: 3rem;
+}
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+}
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(223.17deg, #237287, #246c84 8.61%, #265f7c 17.21%, #274f72 25.82%, #284367 34.42%, #283a5f 43.03%, #28375c 51.63%);
+}
+
+.timeline-header {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  padding-top: 10em;
+}
+.timeline-header__title {
+  color: #fff;
+  font-size: 46px;
+  font-family: Cardo;
+  font-weight: normal;
+  margin: 0;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+
+/* Responsive hack */
+@media only screen and (min-width: 499px) and (max-width: 1212px) {
+	.wrapper {
+		width: 500px;
+	}
+}
+
+@media only screen and (max-width: 498px) {
+	.wrapper {
+		width: 300px;
+	}
+
+	div.gallery ul {
+		list-style-type: none;
+		margin: 0;
+	}
+}
+
+/* CREDITS */
+
+.credits {
+  background-color: #111117;
+  color: white;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+.credits header {
+  margin: 20px 0;
+}
+.credits header h1 {
+  font-size: 10em;
+  letter-spacing: .1em;
+  font-family: 'Bungee', cursive;
+  text-align: center;
+}
+
+.credits section h2 {
+  font-size: 1.7em;
+  font-family: 'Bungee', cursive;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.credits img {
+  width: 700px;
+  margin-left: -100px;
+}
+
+.credits .container {
+  padding: 50px;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+}
+
+.credits .content {
+  display: flex;
+  overflow: hidden;
+}
+
+.credits .ratings {
+  margin: 4px 0 0 8px;
+}
+.credits .ratings ul {
+  display: flex;
+}
+.credits .ratings ul li {
+  border: none;
+}
+.credits .ratings i {
+  font-size: .5em;
+  padding: 0 2px;
+}
+
+.credits .main {
+  margin-top: 30px;
+  display: flex;
+}
+.credits .main article {
+  width: 320px;
+  padding-right: 30px;
+}
+
+.credits .features p, .review p {
+  line-height: 1.5em;
+}
+
+.credits .preview {
+  padding: 20px 0;
+}
+.credits .preview li {
+  margin-bottom: 20px;
+}
+.credits .preview h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  float: left;
+  margin-right: 10px;
+}
+.credits .preview h4 {
+  text-transform: uppercase;
+  margin: 2px 0 5px 0;
+}
+
+.credits .onscreen {
+  padding: 20px 0;
+  font-family: 'Pathway Gothic One', sans-serif;
+  text-transform: uppercase;
+}
+.credits .onscreen h4 {
+  margin-right: 10px;
+}
+.credits .onscreen li {
+  margin-bottom: 10px;
+  display: flex;
+}
+.credits .onscreen li ul li {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+.credits .side article {
+  width: 320px;
+  padding-right: 30px;
+}
+
+.credits .features {
+  padding: 20px 0;
+}
+.credits .features li {
+  margin-bottom: 20px;
+}
+.credits .features h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  float: left;
+  margin-right: 10px;
+}
+.credits .features h4 {
+  text-transform: uppercase;
+  margin: 2px 0 5px 0;
+}
+
+.credits .review {
+  padding: 20px 0;
+}
+.credits .review li {
+  margin-bottom: 20px;
+}
+.credits .review h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  float: left;
+  margin-right: 10px;
+}
+.credits .review h4 {
+  text-transform: uppercase;
+  margin: 2px 0 5px 0;
+}
+
+.credits .red {
+  color: #FF3200;
+}
+.credits .yellow {
+  color: #FFC700;
+}
+.credits .blue {
+  color: #0185B5;
+}
+
+
+/* FEEDBACK */
+.feedback {
+  background-color: #111117;
+
+}
+
